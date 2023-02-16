@@ -17,3 +17,32 @@
 .text-13 {
   font-size: 13px;
 }
+
+.h-lg {
+  height: 600px;
+}
+
+.top-20 {
+  top: 40%;
+}
+
+.h-1-5 {
+  height: 1px;
+}
+
+.text-xsm {
+  font-size: 0.6rem;
+}
+
+.fade-fixed {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}

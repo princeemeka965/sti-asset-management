@@ -24,9 +24,14 @@ module.exports = withMT({
             'bermuda-blue': '#2B3056',
             'pink': '#FEF3EB',
             'grey-light': '#ABABAB',
-            'carrot-orange': '#F68634'
+            'carrot-orange': '#F68634',
+            'divider-grey': '#D9D9D9'
         },
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'home': "linear-gradient(0deg, rgba(43, 48, 86, 0.5), rgba(43, 48, 86, 0.5)), url('/city-extension.svg')"
+            }
+        },
         fontFamily: {
             'sans': ['ui-sans-serif', 'system-ui'],
             'serif': ['ui-serif', 'Georgia'],

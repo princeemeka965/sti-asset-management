@@ -11,7 +11,7 @@ import {
 export default function SubHeader() {
     return (
         <>
-            <div className="w-full flex justify-center lg:h-9 xs:h-6 py-2 lg:px-10 bg-bermuda-blue">
+            <div className="w-full flex justify-center lg:h-9 xs:h-6 py-2 lg:px-20 bg-bermuda-blue">
                 <div className="flex flex-grow lg:w-1/2 sm:w-1/4">
                     <span className="px-2 sm:py-1 flex">
                         <Image
@@ -51,7 +51,7 @@ export default function SubHeader() {
                     {/** Desktop View */}
                     <Menu className="sm:hidden lg:block px-10">
                         <MenuHandler>
-                            <span className="font-500 text-sm text-white sm:hidden lg:flex cursor-pointer">Language Translator
+                            <span className="font-500 text-sm text-white sm:hidden lg:flex cursor-pointer pr-5">Language Translator
                                 <Image
                                     priority
                                     src="/chevrolet-down.svg"
@@ -82,9 +82,9 @@ export default function SubHeader() {
                     </Menu>
 
                     {/** Mobile View */}
-                    <Menu className="sm:block lg:hidden sm:px-10" style={{paddingTop : '1%'}}>
+                    <Menu className="sm:block lg:hidden sm:px-5">
                         <MenuHandler>
-                            <span className="text-xs text-white sm:flex lg:hidden">Translator
+                            <span className="text-xs text-white sm:flex lg:hidden" style={{ paddingTop: '1%' }}>Translator
                                 <Image
                                     priority
                                     src="/chevrolet-down.svg"
@@ -121,15 +121,15 @@ export default function SubHeader() {
                     </span>
 
                     {/** Desktop View */}
-                    <Menu className="sm:hidden lg:block pl-20">
+                    <Menu className="sm:hidden lg:block pl-20 pr-10">
                         <MenuHandler>
-                            <span className="font-500 text-xs text-white sm:hidden lg:flex cursor-pointer">Client Login
+                            <span className="font-500 text-xs text-white sm:hidden lg:flex cursor-pointer my-1 pl-5 pr-10">Client Login
                                 <Image
                                     priority
                                     src="/chevrolet-down.svg"
                                     height={20}
                                     width={20}
-                                    className='ml-1 mt-1'
+                                    className='ml-1'
                                     style={{ width: '1rem', height: '1rem' }}
                                     alt="down"
                                 />
@@ -183,7 +183,7 @@ export default function SubHeader() {
                             </MenuItem>
                             <MenuItem className="cursor-default hover:bg-white bg-white flex flex-col items-center p-2" style={{ background: '#FFF' }}>
                                 <span className="text-grey-light text-xs uppercase">STI Assets Management Limited</span>
-                                <Button className="bg-carrot-orange my-2 w-full"> Sign In</Button>
+                                <Button className="bg-carrot-orange my-2 w-full"> Sign In </Button>
                             </MenuItem>
                             <MenuItem className="text-center flex" style={{ background: '#FFF' }}>
                                 <Link href='signup' className="text-grey-light text-xs px-6">Sign Up</Link>
