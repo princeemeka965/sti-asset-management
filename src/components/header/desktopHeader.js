@@ -12,7 +12,7 @@ export default function DesktopHeader({ classProps, app }) {
     return (
         <>
             <div className={classProps}>
-                <div className={`bg-${app} w-full h-lg`}>
+                <div className={`bg-home w-full h-lg`}>
                     <div className="w-full flex justify-center py-3 lg:px-20">
                         <div className="flex flex-grow lg:w-1/4">
                             <span className="px-2 lg:py-3 flex">
