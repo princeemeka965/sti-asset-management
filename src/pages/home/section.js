@@ -1,4 +1,4 @@
-import { Card } from "@material-tailwind/react";
+import { Card, CardBody, CardFooter, CardHeader } from "@material-tailwind/react";
 import Image from "next/image";
 import { Fade, Slide } from "react-awesome-reveal";
 
@@ -6,15 +6,15 @@ export default function Section() {
 
     return (
         <>
-            <div className="w-full flex justify-start py-3 lg:pl-16">
+            <div className="w-full justify-start py-3 lg:pl-16 lg:flex sm:hidden">
                 <div className="w-1/3">
                     <span className="font-black text-4xl">
                         Assets Management made easy
                     </span>
                 </div>
-                <Slide>
+                <Slide triggerOnce={true}>
                     <Card className="p-4 mx-4 w-11/12 -mt-24">
-                        <Fade delay={1e3} cascade>
+                        <Fade delay={1e3} cascade triggerOnce={true}>
                             <div className="flex flex-col py-4 pl-2">
                                 <Image
                                     priority
@@ -47,7 +47,7 @@ export default function Section() {
                         </Fade>
                     </Card>
                     <Card className="p-4 mx-4 w-11/12 -mt-24">
-                        <Fade delay={1e3} cascade>
+                        <Fade delay={1e3} cascade triggerOnce={true}>
                             <div className="flex flex-col py-4 pl-2">
                                 <Image
                                     priority
@@ -80,7 +80,7 @@ export default function Section() {
                         </Fade>
                     </Card>
                     <Card className="p-4 mx-4 w-11/12 -mt-24">
-                        <Fade delay={1e3} cascade>
+                        <Fade delay={1e3} cascade triggerOnce={true}>
                             <div className="flex flex-col py-4 pl-2">
                                 <Image
                                     priority
@@ -116,10 +116,10 @@ export default function Section() {
             </div>
 
 
-            {/** ABOUT US */}
+            <Fade direction='down' duration={2000} triggerOnce={true} cascade className="flex flex-col items-center">
+                {/** ABOUT US */}
 
-            <div className="w-full flex flex-col items-center py-3 my-28 lg:px-16">
-                <Fade direction='down' cascade className="flex flex-col items-center">
+                <div className="w-full flex-col items-center py-3 mt-28 mb-2 lg:px-16 lg:flex sm:hidden">
                     <div className="w-1/2">
                         <p className="text-4xl font-black text-center">
                             About Us
@@ -190,8 +190,125 @@ export default function Section() {
                             </div>
                         </div>
                     </div>
-                </Fade>
-            </div>
+                </div>
+
+
+                {/** Our Products */}
+
+                <div className="w-full lg:flex flex-col items-center lg:py-5 my-28 lg:px-16 sm:hidden bg-grey-pink">
+                    <div className="w-4/5 flex flex-col items-center">
+                        <div className="w-4/5">
+                            <p className="text-4xl font-black text-center">
+                                Our Products
+                            </p>
+                            <p className="my-5 text-base text-center">
+                                We provide both wholesale and retail products
+                                that are specifically designed to meet the
+                                exclusive investment requirements and objectives of our customers.
+                            </p>
+                        </div>
+                        <div className="flex w-full my-10">
+                            <Card className="w-1/3 mx-3 p-0" style={{ borderRadius: '0px' }}>
+                                <CardHeader floated={false} className='h-auto mt-0 mx-0 p-0' style={{ borderRadius: '0px' }}>
+                                    <Image
+                                        priority
+                                        src="/riskProfiling.svg"
+                                        height={150}
+                                        width={200}
+                                        className='w-full'
+                                        alt="investment"
+                                    />
+                                </CardHeader>
+                                <CardBody className="p-5">
+                                    <span>
+                                        We provide both wholesale and retail products
+                                        that are specifically designed to meet the
+                                        exclusive investment requirements and objectives of our customers.
+                                    </span>
+                                </CardBody>
+                                <CardFooter className="gap-7 pt-2">
+                                    <p className="my-3 text-base flex text-carrot-orange font-bold">
+                                        Read More
+                                        <Image
+                                            priority
+                                            src="/arrow-orange.svg"
+                                            height={16}
+                                            width={16}
+                                            className='ml-1'
+                                            alt="arrow Logo"
+                                        />
+                                    </p>
+                                </CardFooter>
+                            </Card>
+                            <Card className="w-1/3 mx-3 p-0" style={{ borderRadius: '0px' }}>
+                                <CardHeader floated={false} className='h-auto mt-0 mx-0 p-0' style={{ borderRadius: '0px' }}>
+                                    <Image
+                                        priority
+                                        src="/investorProfiling.svg"
+                                        height={200}
+                                        width={200}
+                                        className='w-full'
+                                        alt="investment"
+                                    />
+                                </CardHeader>
+                                <CardBody className="p-5">
+                                    <span>
+                                        Investor profiling (your social and personal traits i.e.
+                                        age, gender, income, wealth etc.
+                                        to determine your investment preference)
+                                    </span>
+                                </CardBody>
+                                <CardFooter className="gap-7 pt-2">
+                                    <p className="my-3 text-base flex text-carrot-orange font-bold">
+                                        Read More
+                                        <Image
+                                            priority
+                                            src="/arrow-orange.svg"
+                                            height={16}
+                                            width={16}
+                                            className='ml-1'
+                                            alt="arrow Logo"
+                                        />
+                                    </p>
+                                </CardFooter>
+                            </Card>
+                            <Card className="w-1/3 mx-3 p-0" style={{ borderRadius: '0px' }}>
+                                <CardHeader floated={false} className='h-auto mt-0 mx-0 p-0' style={{ borderRadius: '0px' }}>
+                                    <Image
+                                        priority
+                                        src="/assetAllocator.svg"
+                                        height={200}
+                                        width={200}
+                                        className='w-full'
+                                        alt="investment"
+                                    />
+                                </CardHeader>
+                                <CardBody className="p-5">
+                                    <span>
+                                        Asset allocator (allocate your portfolio assets according to your goal,
+                                        risk tolerance and investment prospect with the aim of balancing both risk and reward)
+                                    </span>
+                                </CardBody>
+                                <CardFooter className="gap-7 pt-2">
+                                    <p className="my-3 text-base flex text-carrot-orange font-bold">
+                                        Read More
+                                        <Image
+                                            priority
+                                            src="/arrow-orange.svg"
+                                            height={16}
+                                            width={16}
+                                            className='ml-1'
+                                            alt="arrow Logo"
+                                        />
+                                    </p>
+                                </CardFooter>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+
+            </Fade>
+
         </>
     )
 }

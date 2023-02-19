@@ -48,14 +48,14 @@ export default function DesktopHeader({ classProps, app }) {
 
                     <div className="w-full flex justify-start py-3 lg:px-20">
                         <div className="py-3 flex-flex-col w-1/4">
-                            <Slide>
+                            <Slide triggerOnce={true}>
                                 <span className="text-3xl font-black text-white">
                                     Financial services
                                     made simple
                                 </span>
                             </Slide>
 
-                            <Fade top delay={1e3} cascade className="text-white py-5">
+                            <Fade top delay={1e3} cascade triggerOnce={true} className="text-white py-5">
                                 <p className="text-white py-3">
                                     A wholly owned Nigerian company poised to provide cutting-edge
                                     financial services geared at supporting the business
