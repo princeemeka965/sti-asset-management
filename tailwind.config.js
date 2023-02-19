@@ -25,7 +25,8 @@ module.exports = withMT({
             'pink': '#FEF3EB',
             'grey-light': '#ABABAB',
             'carrot-orange': '#F68634',
-            'divider-grey': '#D9D9D9'
+            'divider-grey': '#D9D9D9',
+            'grey-pink': 'rgba(246, 134, 52, 0.03)'
         },
         extend: {
             backgroundImage: {
